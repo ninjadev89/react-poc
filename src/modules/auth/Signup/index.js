@@ -51,11 +51,10 @@ export class Signup extends Component {
     return (
         <div class="registerWrapper">
             <div class="registerContainer">
+            {!userCreated ?
+                <>
                 <h3 class="formTitle">Sign up</h3>
-                {userCreated ? <span style={{"color":"green"}}>{'Signup Successfully'}</span> : ''}
-             
                 <div class="formContainer">
-                    
                     <div class="registerLeftwrapper">
                     <form id="registrationForm">
                         <div class="mb-3">
@@ -67,7 +66,7 @@ export class Signup extends Component {
                         <div class="mb-3">
                             <input type="password" class="form-control" name="password" id="password" placeholder="Password" onChange={e => this.handleOnChange(e)} value={password}/>
                         </div>
-                     <button type="submit" class="btn btn-primary btn-registration" onClick={this.createAccount}>create account</button>
+                     <button type="submit" class="btn btn-primary btn-registration" disabled={!this.validateForm()} onClick={this.createAccount}>create account</button>
                     </form>
                 </div>
                 <span>or</span>
@@ -76,6 +75,9 @@ export class Signup extends Component {
                     <p class="signinInfo">Already a member? <a href="#login" title="login" class="signInLink">Signin here</a></p>
                 </div>
                 </div>
+                </>
+                : <h3 class="formTitle">Sign up successful</h3>
+            }
             </div>      
             </div>
         );
