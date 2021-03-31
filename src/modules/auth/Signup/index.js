@@ -8,7 +8,8 @@ export class Signup extends Component {
     super();
     this.state = {
         signupdata: {},
-        error: false
+        error: false,
+        userCreated: false
     }
  }
 
@@ -20,19 +21,41 @@ export class Signup extends Component {
         signupdata: {
             ...signupdata,
             [name]: value
-        }
+        },
+        userCreated: false
     })
  }
 
+ validateForm = () => {
+    const {signupdata} = this.state;
+    const {phoneNumber, emailId, password} = signupdata;
+    return phoneNumber && emailId && password ? true : false;
+ }
+
+ createAccount = (e) => {
+    e.preventDefault();
+    console.log(this.validateForm(), 'sdfsd')
+    if (this.validateForm()) {
+        this.setState({
+            userCreated: true,
+            signupdata: {}
+        })
+    } 
+    return false;
+ }
+
   render () {
-      
-    const {phoneNumber, emailId, passWord} = this.state;
+    const {signupdata, userCreated} = this.state;
+    const {phoneNumber, emailId, password} = signupdata;
     
     return (
         <div class="registerWrapper">
             <div class="registerContainer">
                 <h3 class="formTitle">Sign up</h3>
+                {userCreated ? <span style={{"color":"green"}}>{'Signup Successfully'}</span> : ''}
+             
                 <div class="formContainer">
+                    
                     <div class="registerLeftwrapper">
                     <form id="registrationForm">
                         <div class="mb-3">
@@ -42,14 +65,14 @@ export class Signup extends Component {
                             <input type="email" class="form-control" name="emailId" id="emailId" aria-describedby="emailHelp" placeholder="Email ID" onChange={e => this.handleOnChange(e)} value={emailId}/>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" onChange={e => this.handleOnChange(e)} value={passWord}/>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" onChange={e => this.handleOnChange(e)} value={password}/>
                         </div>
                      <button type="submit" class="btn btn-primary btn-registration" onClick={this.createAccount}>create account</button>
                     </form>
                 </div>
                 <span>or</span>
                 <div class="registerRightwrapper">
-                    <button type="submit" class="btn btn-primary btn-register-facebook">register with facebook </button>
+                    <button type="button" class="btn btn-primary btn-register-facebook">register with facebook </button>
                     <p class="signinInfo">Already a member? <a href="#login" title="login" class="signInLink">Signin here</a></p>
                 </div>
                 </div>
