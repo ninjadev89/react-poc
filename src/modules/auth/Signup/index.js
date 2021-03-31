@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Container } from 'reactstrap';
-import PropTypes from 'prop-types';
 
 export class Signup extends Component {
  // static displayName = Layout.name;
@@ -34,7 +32,6 @@ export class Signup extends Component {
 
  createAccount = (e) => {
     e.preventDefault();
-    console.log(this.validateForm(), 'sdfsd')
     if (this.validateForm()) {
         this.setState({
             userCreated: true,
