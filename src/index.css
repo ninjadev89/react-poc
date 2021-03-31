@@ -1,13 +1,108 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.registerWrapper {
+  background-color: rgba(189,49,118,1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.registerWrapper::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.registerContainer {
+  background-color: #fff;
+  width: 80%;
+  max-width: 800px;
+  height: 75vh;
+  padding: 60px;
+  border-radius: 18px;
+  position: relative;
+  z-index: 99;
+}
+
+.formTitle {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #c4327a;
+}
+
+.formContainer {
+  display: flex;
+  align-items: center;
+}
+
+.registerLeftwrapper,
+.registerRightwrapper {
+  width:40%;
+}
+
+.formContainer > span {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cecece;
+}
+
+.formContainer .form-control {
+  border-width: 0 0 1px;
+  border-radius: 0;
+  padding: 6px 0;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #c4327a;
+  border-bottom-width:2px;
+}
+
+.btn-registration {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 38px;
+  background-image: linear-gradient(to right,#c105b1,#eb286a,#f3da97);
+  border-color: transparent;
+}
+
+.btn-check:focus+.btn-primary,
+.btn-primary:focus,
+.btn-primary,
+.btn-primary:hover {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.btn-register-facebook {
+  width: 100%;
+  border-radius: 8px;
+  font-size: 14px;
+  height: 38px;
+  background-color: #3b5999;
+}
+
+.signinInfo {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.signInLink {
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
 }
