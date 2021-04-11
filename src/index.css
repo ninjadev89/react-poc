@@ -1,3 +1,9 @@
+body {
+  font-family: 'Lato', sans-serif;
+  color: #261323;
+  font-size: 18px;
+}
+
 .registerWrapper {
   background-color: rgba(189,49,118,1);
   display: flex;
