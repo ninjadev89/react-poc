@@ -8,6 +8,9 @@ const SearchWrapper = styled.div`
   position:relative;
   z-index:2;
   padding-bottom: 100px;
+  @media (max-width: 768px) { 
+    padding-bottom: 40px;
+  }
 `;
 
 const SearchContainer = styled.div`
@@ -24,6 +27,14 @@ const SearchContainer = styled.div`
     position: relative;
     margin: -45px auto 0;
 
+    @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
+      padding: 25px 10px;
+      flex-wrap: wrap;
+    }
+
+
     & input {
       height : 38px;
       background: #F7F8FA 0% 0% no-repeat padding-box;
@@ -32,18 +43,29 @@ const SearchContainer = styled.div`
       margin-right: 15px;
       padding: 0 15px;
 
-      &:focus {
-        
+      &:focus {        
         outline:none;
+      }
+
+      @media (max-width: 768px) { 
+         width:30%;
+         margin-bottom: 15px;
       }
     }
 
 `;
 
 const SearchField = styled.span`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media (max-width: 768px) { 
+      width: 65%;       
+      input {
+        width:100%;
+      }
+    }
 `;
 
 const SelectDate = styled.button`
@@ -54,9 +76,15 @@ const SelectDate = styled.button`
   background:#fff;
   font-size:12px;
   padding: 0 6px;
-  min-width: ${props => props.lg ? "80px" : "60px"};
   display:inline-block;
-  color:${props => props.active ? "#E0247D" : "#E2E2E2"}
+
+  @media (max-width: 768px) { 
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+
+  min-width: ${props => props.lg ? "80px" : "60px"};  
+  color:${props => props.active ? "#E0247D" : "#E2E2E2"} 
 
 `;
 
@@ -73,6 +101,10 @@ const Search = styled.button`
     display:inline-block;
     margin-left: 20px;
     border:1px solid #E2E2E2;
+
+    @media (max-width: 768px) { 
+      margin-left: 0px;
+    }
 `;
 
 const CategoryWrapper = styled.div`
@@ -81,6 +113,11 @@ const CategoryWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    
+    @media (max-width: 768px) { 
+        flex-wrap : wrap;
+        margin:0 0 25px;
+    }
 `;
 
 const CategoryItem = styled.div`
@@ -96,6 +133,12 @@ const CategoryItem = styled.div`
     border-radius: 6px;
     height: 38px;
     color: #261323;
+
+    @media (max-width: 768px) { 
+      flex-wrap: wrap;
+      margin: 10px 10px 0 0;
+      min-width: 110px;
+    }
 `;
 
 export default {

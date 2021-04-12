@@ -58,6 +58,11 @@ const BannerWrapper = styled.div`
         width: 72px;
         height: 72px;
         background: rgba(255,255,255,0.5);
+
+        @media (max-width: 768px) {
+            width: 32px;
+            height: 32px;
+        }
     }
 
     .carousel-control-prev-icon {
@@ -72,16 +77,30 @@ const BannerWrapper = styled.div`
     .carousel-control-prev-icon {
         width: 27px;
         height: 50px;        
+        @media (max-width: 768px) {
+            width: 20px;
+            height: 24px;
+        }
     }
 
     .carousel-control-prev {
         left: 30px;
         top:80px;
+        @media (max-width: 768px) {
+            left: 15px;
+            top:auto;
+            bottom : 80px;
+        }
     }
 
     .carousel-control-next {
         right: 30px;
         top:80px;
+        @media (max-width: 768px) {
+            right: 15px;
+            top:auto;
+            bottom : 80px;
+        }
     }
 
     .carousel-indicators {

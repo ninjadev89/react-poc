@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 const MultiItemSliderWrapper = styled.div`
+    margin-bottom : 25px;
     h4 {
         font-size: 18px;
         font-weight:bold;

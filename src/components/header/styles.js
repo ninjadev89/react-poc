@@ -6,7 +6,6 @@ const HeaderWrapper = styled.div`
     flex-direction: column;
     width: 100%;
     height: 76px;
-    // background: #E0247D 0% 0% no-repeat padding-box;
     background-image: linear-gradient(to right, #c31496 , #944ebe);
     justify-content:center;
 
@@ -16,6 +15,11 @@ const HeaderWrapper = styled.div`
         letter-spacing: 0px;
         color: #FFFFFF !important;
         margin-left:8px;
+    }
+
+    @media (max-width: 768px) { 
+        height:auto;
+        border-bootom: 1px solid #ccc;
     }
 `;
 

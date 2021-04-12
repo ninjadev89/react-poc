@@ -6,6 +6,10 @@ const AboutUsWrapper = styled.div`
    padding: 120px 0;
    background: #F7F8FA;
 
+    @media (max-width: 768px) { 
+        padding: 60px 0;
+    }
+
    & p {
        font-size: 14px;
        color: #261323;
@@ -29,6 +33,10 @@ const SectionTitle = styled.h3`
     color: #261323;
     font-weight:bold;
     margin-bottom: 50px;
+
+    @media (max-width: 768px) { 
+        margin-bottom: 30px;
+    }
 `;
 
 const TitleIcon = styled.div`
@@ -40,8 +48,8 @@ const OurTeamWrapper = styled.div`
     padding: 120px 0;
     color: #261323;
 
-    p {
-
+    @media (max-width: 768px) { 
+        padding: 60px 0;
     }
 `;
 
@@ -63,12 +71,24 @@ const TeamMemberWrapper = styled.div`
     background-size: 100% auto;
     background-repeat: no-repeat;
     padding-left:70px;
+
+    @media (max-width: 768px) { 
+        padding-left:40px;
+        width: 120px;
+    }
     
     & div {
         width: 96px;
         height:96px;
         margin-bottom: 15px;
-
+        @media (max-width: 768px) { 
+            width: 60px;
+            height: 60px;
+        }
+        img {
+            max-width:100%;
+            height:auto;
+        }
     }
 
     & h6 {

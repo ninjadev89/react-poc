@@ -14,12 +14,12 @@ const HomeStaticContent = () => {
         <Elem.AboutUsWrapper>
             <Container> 
                 <Row>
-                    <Col>
+                    <Col xs={12}>
                         <Elem.AboutUsImage>
                             <img src={aboutUs} alt="text" />
                         </Elem.AboutUsImage>
                     </Col>
-                    <Col>
+                    <Col xs={12}>
                         <Elem.TitleIcon>
                             <img src={TitleIcon} title="TitleIcon" />
                         </Elem.TitleIcon>
@@ -39,7 +39,7 @@ const HomeStaticContent = () => {
         <Elem.OurTeamWrapper>
             <Container> 
                 <Row>
-                    <Col>
+                    <Col xs={12}>
                         <Elem.TitleIcon>
                             <img src={TitleIcon} title="TitleIcon" />
                         </Elem.TitleIcon>
@@ -51,7 +51,7 @@ const HomeStaticContent = () => {
                             conubia nostra, per inceptos himenaeos. Phasellus malesuada congue facilisis
                         </p>
                     </Col>
-                    <Col>
+                    <Col xs={12}>
                         <Elem.TeamMembersWrapper>
                             <Elem.TeamMemberWrapper>
                                 <div>

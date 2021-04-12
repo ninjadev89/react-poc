@@ -9,7 +9,7 @@ const Header = () => {
   return (
         <Elem.HeaderWrapper>    
             <Container> 
-                <Navbar fixed="top" sticky="top" expand="md" className={'px-0'}>
+                <Navbar expand="md" className={'px-0'}>
                     <Navbar.Brand href="#home">
                         <img src={logo} alt="logo" />
                     </Navbar.Brand>
